@@ -14,5 +14,5 @@ Backend - https://github.com/mohamedrifkhan30/patient-doctor-app/tree/master/bac
 ## Build
 
 1. NPM install
-2. docker build -t patient-doctor-bk:1.0 .
+2. docker build -t patient-doctor-app:1.0 .
 3. docker run --name patidoc-fe-container -d -p 4201:80 patient-doctor-app:1.0
