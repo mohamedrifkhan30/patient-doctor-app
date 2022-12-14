@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  mysql:
+    container_name: db-mysql
+    image: mysql:latest
+    networks:
+      - app
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_TCP_PORT: 3306
+    volumes:
+      - mysql-log:/var/log
+      - mysql-data:/var/lib/mysql
+      - ./mysql-dump:/docker-entrypoint-initdb.d
+  backend:
+    container_name: app-backend
+    image: patient-doctor-bk:1.0
+    networks:
+      - app
+    ports:
+      - 8080:8080
+  frontend:
+    container_name: app-frontend
+    image: patient-doctor-app:1.0
+    networks:
+      - app
+    ports:
+      - 4200:80
+
+volumes:
+  mysql-log:
+    driver: local
+  mysql-data:
+    driver: local
+
+networks:
+  app:
+    driver: bridge

@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `doctorpatient` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `doctorpatient`;
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: doctorpatient
@@ -65,6 +67,14 @@ LOCK TABLES `patients` WRITE;
 INSERT INTO `patients` VALUES (1,'Mr Patient 1',1),(2,'Mr Patient 2',1),(3,'Mr Patient 3',1),(4,'asadda134fd',2),(5,'Mr Patient 5',6);
 /*!40000 ALTER TABLE `patients` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'doctorpatient'
+--
+
+--
+-- Dumping routines for database 'doctorpatient'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -75,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-14 12:01:01
+-- Dump completed on 2022-12-14 20:23:06

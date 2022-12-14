@@ -11,6 +11,4 @@ Node version - 14.21
 
 ## Build
 
-1. NPM install
-2. docker build -t patient-doctor-bk:1.0 .
-3. docker run --name patidoc-fe-container -d -p 4201:80 patient-doctor-app:1.0
+1. docker build -t patient-doctor-app:1.0 .
