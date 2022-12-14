@@ -1,0 +1,28 @@
+<mat-card>
+  <form (submit)="savePatient(patientForm)" #patientForm="ngForm">
+    <mat-form-field>
+      <mat-label>Patient Name</mat-label>
+      <input matInput type="text" name="name" ngModel />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Doctor</mat-label>
+
+      <input
+        type="text"
+        placeholder="Pick one"
+        aria-label="Number"
+        name="doctor"
+        matInput
+        ngModel
+        [matAutocomplete]="auto"
+      />
+
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of options$ | async" [value]="option">
+          {{ option.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <button mat-raised-button color="accent">Save</button>
+  </form>
+</mat-card>
