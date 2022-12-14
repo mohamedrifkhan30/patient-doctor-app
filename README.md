@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Node version - 14.21
 
+Backend - https://github.com/mohamedrifkhan30/patient-doctor-app/tree/master/backend
+
 ## Development server
 
 1. NPM install
@@ -12,3 +14,4 @@ Node version - 14.21
 ## Build
 
 1. docker build -t patient-doctor-app:1.0 .
+2. docker-compose up -d

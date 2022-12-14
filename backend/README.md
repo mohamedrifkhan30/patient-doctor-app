@@ -12,4 +12,4 @@
 ## Production server
 
 1. docker build -t patient-doctor-bk:1.0 .
-4. docker-compose up -d
+2. docker-compose up -d
